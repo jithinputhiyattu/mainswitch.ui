@@ -34,14 +34,22 @@ class Billing extends Component {
         const rows = tbody.childNodes;
         const pdf = new jsPDF();
         const pageHeight = pdf.internal.pageSize.getHeight();
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        console.dir(pageWidth);
         let currentPageHeight = rowHeight;
         let promises = [];
+        const leftX = 10;
+        const rightY = 10;
+
+        const widthDivider = 10;
+        const heightDivider = 10;
 
         html2canvas(thead)
             .then((canvas) => {
+
                 currentPageHeight += rowHeight;
                 const imgData = canvas.toDataURL('image/png');
-                pdf.addImage(imgData, 'png', 1, 1, canvas.width / 6, canvas.height / 8);
+                pdf.addImage(imgData, 'png', leftX, rightY, pageWidth - 2 * rightY, canvas.height / heightDivider);
             }).then(() => {
                 rows.forEach((tableRow) => {
                     promises.push(html2canvas(tableRow));
@@ -55,7 +63,7 @@ class Billing extends Component {
                             pdf.addPage();
                         }
                         const imgData = canvas.toDataURL('image/png');
-                        pdf.addImage(imgData, 'png', 1, currentPageHeight, canvas.width / 6, canvas.height / 8);
+                        pdf.addImage(imgData, 'png', leftX, currentPageHeight, pageWidth - 2 * rightY, canvas.height / heightDivider);
                     });
                 }).then(() => {
                     pdf.save('Bill[No.].pdf');
