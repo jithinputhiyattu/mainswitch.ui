@@ -1,0 +1,21 @@
+.menu-bar {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+
+  .menu-bar-buttons {
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .menu-bar {
+    justify-content: center;
+    .menu-bar-buttons {
+      width: 300px;
+    }
+  }
+}

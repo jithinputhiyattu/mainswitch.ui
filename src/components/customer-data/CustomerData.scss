@@ -1,0 +1,22 @@
+.user-data {
+    background-color: white;
+    min-height: 100vh;
+    width: 60%;
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    text-align: left;
+    font-size: calc(10px + 1vmin);
+    color: black;
+}
+
+.form-button {
+    float: right;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .user-data  {
+        width: 100%;
+    }
+  }
