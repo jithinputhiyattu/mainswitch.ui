@@ -115,10 +115,12 @@ class Billing extends Component {
                             <Form.Label>Select item</Form.Label>
                             <Form.Control as="select" name="itemName" onChange={this.onChange} value={this.state.itemName}>
                                 <option>Choose...</option>
-                                <option>Fan Point</option>
-                                <option>Light Point</option>
-                                <option>Jithin</option>
-                                <option>Puthiyattu</option>
+                                <option>Fan point</option>
+                                <option>Light point</option>
+                                <option>Motor point</option>
+                                <option>Exhaust fan point</option>
+                                <option>GI box andearthing the point </option>
+                                <option>Call bell point</option>
                             </Form.Control>
                         </Form.Group>
                         <Form.Group as={Col} xs lg="2" controlId="unit">
