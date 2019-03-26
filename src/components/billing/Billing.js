@@ -3,7 +3,7 @@ import { Button, Col, Table, Form } from 'react-bootstrap';
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas';
 import './Billing.scss';
-
+import BillHeader from '../bill-header/BillHeader';
 class Billing extends Component {
     constructor(props) {
         super(props);
@@ -117,6 +117,7 @@ class Billing extends Component {
 
         return (
             <div className="bill-data">
+                            <BillHeader></BillHeader>
                 <Form onSubmit={this.onSubmit}>
                     <Form.Row>
                         <Form.Group as={Col} controlId="items">
