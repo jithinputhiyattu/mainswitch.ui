@@ -36,15 +36,13 @@ export default class Main extends Component {
                             <Link to="/billing">
                                 <Button className="menu-bar-buttons" variant="warning">Billing</Button>
                             </Link>
-                            <Link to="/user-data">
-                                <Button className="menu-bar-buttons" variant="warning">Downlod</Button>
-                            </Link>
                         </ButtonToolbar>
                     </div>
                 </Navbar>
 
                 <div>
                     <header className="App-header">
+                    <Route path="/" exact component={ChooseWork}></Route>
                         <Route path="/user-data" component={UserData}></Route>
                         <Route path="/choose-work" component={ChooseWork}></Route>
                         <Route path="/customer-data" component={CustomerData}></Route>
@@ -53,11 +51,11 @@ export default class Main extends Component {
 
                 </div>
                 <Navbar bg="dark" variant="dark" className="footer">
-                <div>
-                <label className="footer-label"> Design and Developed By d4dreams </label>
-                    <br></br>
-                    <label className="footer-label">   Version: 0.0.1 </label>
-                </div>
+                    <div>
+                        <label className="footer-label"> Design and Developed By d4dreams </label>
+                        <br></br>
+                        <label className="footer-label">   Version: 0.0.1 </label>
+                    </div>
 
                 </Navbar>
             </BrowserRouter>
