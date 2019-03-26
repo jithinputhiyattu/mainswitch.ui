@@ -35,7 +35,6 @@ class ChooseWork extends Component {
         return (
             <div>
                 <div className="app-title-div">
-                    <label>    Main Switch</label>
                 </div>
                 <div>
                     <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>

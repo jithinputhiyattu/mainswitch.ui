@@ -1,14 +1,42 @@
 .menu-bar {
   width: 100%;
   padding: 10px;
-  background-color: white;
+  display: inline;
+  //background-color: white;
   border-radius: 5px;
 
   .menu-bar-buttons {
     padding: 5px;
     margin: 5px;
+    border-radius: 0px;
     width: 150px;
   }
+}
+
+.footer-label {
+
+  color: white;
+
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: black;
+}
+
+.main-title {
+  color:white;
+  width:150px;
+  font-size: 22px; 
+  display: block;
 }
 
 @media only screen and (max-width: 400px) {
